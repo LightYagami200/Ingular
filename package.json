@@ -1,0 +1,40 @@
+{
+  "name": "ingular",
+  "version": "1.0.0",
+  "description": "Discord Moderation bot",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "github:discordjs/discord.js",
+    "discordjs-prompter": "^1.0.0",
+    "express": "^4.17.1",
+    "klasa": "github:dirigeants/klasa#master",
+    "lodash": "^4.17.11",
+    "mongodb": "^3.2.7",
+    "mongoose": "^5.6.1",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LightYagami200/Ingular.git"
+  },
+  "keywords": [
+    "discord",
+    "moderation",
+    "bot",
+    "ingular",
+    "discord.js",
+    "klasa"
+  ],
+  "author": "LightYagami200",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LightYagami200/Ingular/issues"
+  },
+  "homepage": "https://github.com/LightYagami200/Ingular#readme"
+}
