@@ -9,6 +9,7 @@ const keys = require('./config/keys');
 //===============
 Client.defaultGuildSchema.add('roles', schema => schema.add('muted', 'role'));
 Client.defaultGuildSchema.add('minAccAge', 'integer', { default: 1800000 });
+Client.defaultGuildSchema.add('antiinvite', 'boolean', { default: false });
 
 //===============
 //Client
@@ -25,8 +26,14 @@ const client = new Client({
       connectionString: keys.mongoConnectionString
     }
   },
+  pieceDefaults: {
+    monitors: {
+      ignoreOthers: false
+    }
+  },
   readyMessage: client => {
     client.user.setActivity('over Discord | -help', { type: 'WATCHING' });
+    return 'Bot ready';
   }
 });
 
