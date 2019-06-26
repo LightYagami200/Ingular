@@ -10,8 +10,9 @@ Refer to this file for details regarding Contribution
   ```javascript
   module.exports = {
     discordBotToken: 'DISCORD_BOT_TOKEN_HERE',
-    mongoConnectionString: 'MONGO_CONNECTION_STRING_HERE'
+    mongoConnectionString: 'MONGO_CONNECTION_STRING_HERE',
+    googleAPIKey: 'PERSPECTIVE_API_KEY_HERE'
   };
   ```
 
-- Replace `DISCORD_BOT_TOKEN_HERE` and `MONGO_CONNECTION_STRING_HERE` with the keys provided in #keys channel of Discord.
+- Replace `DISCORD_BOT_TOKEN_HERE`, `MONGO_CONNECTION_STRING_HERE` and `PERSPECTIVE_API_KEY_HERE` with the keys provided in #keys channel of Discord.
