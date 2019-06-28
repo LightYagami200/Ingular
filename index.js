@@ -14,9 +14,14 @@ Client.defaultGuildSchema.add('channels', schema =>
 Client.defaultGuildSchema.add('minAccAge', 'integer', { default: 1800000 });
 Client.defaultGuildSchema.add('antiinvite', 'boolean', { default: false });
 Client.defaultGuildSchema.add('antitoxic', 'boolean', { default: false });
-Client.defaultGuildSchema.add('logs', schema =>
-  schema.add('toxic', 'boolean', { default: false })
-);
+Client.defaultGuildSchema.add('antipartialnudity', 'boolean', {
+  default: false
+});
+Client.defaultGuildSchema.add('antinudity', 'boolean', { default: false });
+Client.defaultGuildSchema.add('logs', schema => {
+  schema.add('toxic', 'boolean', { default: false });
+  schema.add('nudity', 'boolean', { default: false });
+});
 Client.defaultGuildSchema.add('toxicthreshold', 'float', {
   default: 0.9,
   min: 0.1,

@@ -11,8 +11,10 @@ Refer to this file for details regarding Contribution
   module.exports = {
     discordBotToken: 'DISCORD_BOT_TOKEN_HERE',
     mongoConnectionString: 'MONGO_CONNECTION_STRING_HERE',
-    googleAPIKey: 'PERSPECTIVE_API_KEY_HERE'
+    googleAPIKey: 'PERSPECTIVE_API_KEY_HERE',
+    sightEngineUser: 'SIGHT_ENGINE_USER_HERE',
+    sightEngineSecret: 'SIGHT_ENGINE_SECRET_HERE'
   };
   ```
 
-- Replace `DISCORD_BOT_TOKEN_HERE`, `MONGO_CONNECTION_STRING_HERE` and `PERSPECTIVE_API_KEY_HERE` with the keys provided in #keys channel of Discord.
+- Replace `DISCORD_BOT_TOKEN_HERE`, `MONGO_CONNECTION_STRING_HERE`, `PERSPECTIVE_API_KEY_HERE`, `SIGHT_ENGINE_USER_HERE` and `SIGHT_ENGINE_SECRET_HERE` with the keys provided in #keys channel of Discord.
