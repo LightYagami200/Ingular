@@ -14,6 +14,7 @@ module.exports = class extends Command {
   }
 
   async run(msg, [user, reason]) {
+    if (user === null) throw 'Not a member of this Guild.';
     if (user.id === msg.author.id) throw 'Why would you ban yourself?';
     if (user.id === this.client.user.id) throw 'Have I done something wrong?';
 
@@ -23,7 +24,7 @@ module.exports = class extends Command {
         throw 'You cannot ban this user.';
       if (!member.bannable) throw 'I cannot ban this user.';
     } else {
-      throw 'not a member of the guild.';
+      throw 'Not a member of the Guild.';
     }
 
     const options = {};
