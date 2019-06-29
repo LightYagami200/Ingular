@@ -2,10 +2,6 @@ const { Command } = require('klasa');
 
 module.exports = class extends Command {
   constructor(...args) {
-    /**
-     * Any default options can be omitted completely.
-     * if all options are default, you can omit the constructor completely
-     */
     super(...args, {
       enabled: true,
       runIn: ['text'],
@@ -42,16 +38,16 @@ module.exports = class extends Command {
       if (!member.bannable) throw 'I cannot strike this user.';
 
       const strikesToStrike = strikes ? strikes : 1;
-
-      await msg.author.settings.update(
+      
+      await user.settings.update(
         'strikes',
-        msg.author.settings.strikes + strikesToStrike
+        user.settings.strikes + strikesToStrike
       );
 
       msg.reply(
         `Striked ${member.displayName}\n\n${
           member.displayName
-        }'s Total Strikes: ${msg.author.settings.strikes}`
+        }'s Total Strikes: ${user.settings.strikes}`
       );
     }
   }
