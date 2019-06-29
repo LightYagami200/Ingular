@@ -49,6 +49,17 @@ module.exports = class extends Command {
           member.displayName
         }'s Total Strikes: ${user.settings.strikes}`
       );
+
+      if (user.settings.strikes >= msg.guild.settings.strikes.ban) {
+        await member.ban({ reason: 'Banned for too many strikes' });
+        msg.reply(`${member.displayName} got banned for too many strikes`);
+      } else if (user.settings.strikes >= msg.guild.settings.strikes.kick) {
+        await member.kick({ reason: 'Kicked for too many strikes' });
+        msg.reply(`${member.displayName} got kicked for too many strikes`);
+      } else if (user.settings.strikes >= msg.guild.settings.strikes.mute) {
+        await member.roles.add(msg.guild.settings.roles.muted);
+        msg.reply(`${member.displayName} got muted for too many strikes`);
+      }
     }
   }
 };
