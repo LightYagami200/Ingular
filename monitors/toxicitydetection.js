@@ -16,6 +16,7 @@ module.exports = class extends Monitor {
   }
 
   async run(msg) {
+    if (msg.channel.nsfw) return null;
     if (msg.content.length < 1) return null;
     if (await msg.hasAtLeastPermissionLevel(6)) return null;
 
