@@ -38,7 +38,7 @@ module.exports = class extends Command {
       if (!member.bannable) throw 'I cannot strike this user.';
 
       const strikesToStrike = strikes ? strikes : 1;
-      
+
       await user.settings.update(
         'strikes',
         user.settings.strikes + strikesToStrike

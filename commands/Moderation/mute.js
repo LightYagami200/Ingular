@@ -1,17 +1,6 @@
 // Copyright (c) 2017-2019 dirigeants. All rights reserved. MIT license.
 const { Command, Duration } = require('klasa');
 
-/*
-
-	To use this correctly, you will also need the unmute task located in
-	/tasks/unmute.js
-
-*/
-
-// Add to your schema definition:
-// KlasaClient.defaultGuildSchema.add('roles', schema => schema
-//   .add('muted', 'role'));
-
 module.exports = class extends Command {
   constructor(...args) {
     super(...args, {
