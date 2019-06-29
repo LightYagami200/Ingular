@@ -30,7 +30,7 @@ To see the bot in action, you can:
 - Create a new project on GCP and enable "Perspective API"
 - Create an API Key for your GCP project
 - Sign up on Sightengine
-- Clone this rep
+- Clone this repo
 - Make sure you have NodeJS installed
 - Set up these environment variables:
   ```
