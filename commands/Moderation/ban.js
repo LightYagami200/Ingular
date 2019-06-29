@@ -22,6 +22,8 @@ module.exports = class extends Command {
       if (member.roles.highest.position >= msg.member.roles.highest.position)
         throw 'You cannot ban this user.';
       if (!member.bannable) throw 'I cannot ban this user.';
+    } else {
+      throw 'not a member of the guild.';
     }
 
     const options = {};
